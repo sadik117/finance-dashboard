@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Finance Dashboard
+
+A clean, modern, and interactive **Finance Dashboard** built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui components.
+
+This dashboard helps users track their income, expenses, and spending patterns with an intuitive interface and role-based viewing experience.
+
+![Finance Dashboard Preview]((https://finance-dashboard-green-gamma.vercel.app/))
+
+##  Features
+
+### Core Features
+- Dashboard Overview – Total Balance, Income, and Expenses summary cards
+- Balance Trend Chart – Interactive area chart showing running balance over time (using Recharts)
+- Spending Breakdown – Visual insights into expenses by category
+- Transactions Management – View, add, edit, and delete transactions
+- Filtering & Search – Filter by type, category, search by description, and sort transactions
+- Insights Section – Smart insights including:
+  - Highest spending category
+  - Monthly spending comparison
+  - Savings rate
+  - Most frequent expense category
+
+### Role-Based UI
+- Admin Role: Can add, edit, and delete transactions
+- Viewer Role: Read-only access (can only view data)
+- Easy role switching via dropdown for demonstration
+
+### Additional Features
+- Fully responsive design (mobile + desktop)
+- Dark mode support
+- Data persistence using localStorage
+- Empty state handling
+- Clean and modern UI with smooth interactions
+- Form validation for transaction entry
+
+## Tech Used
+
+- Framework: Next.js 15 (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS + shadcn/ui
+- Charts: Recharts
+- State Management: React Context + useReducer pattern
+- UI Components: shadcn/ui + Radix UI
+- Icons: Lucide React
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
-```bash
+### Installation
+
+Clone the repository:
+git clone https://github.com/yourusername/finance-dashboard.git
+cd finance-dashboard
+
+Install dependencies:
+npm install
+
+Run the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+├── app/                    # Next.js App Router
+├── components/
+│   ├── dashboard/         # Main dashboard components
+│   ├── ui/                # Reusable shadcn/ui components
+│  
+├── context/               # Finance Context Provider
+├── hooks/                 # Custom hooks (useFinance, useIsMobile, etc.)
+├── types/                 # TypeScript type definitions
+├── lib/                   # Utility functions and constants and mock/initial data
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+# How to Use:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Switch Roles: Use the role selector in the header to toggle between Admin and Viewer mode.
+Add Transaction: Click the "Add Transaction" button (Admin only).
+Edit/Delete: Use action buttons on each transaction row (Admin only).
+Filter Data: Use the search bar and filter dropdowns in the Transactions section.
+View Insights: Check the Insights panel for smart financial observations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Design Decisions:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Used Context API for global state management (lightweight and sufficient for this scale).
+Implemented memoization (useMemo, useCallback) for performance optimization.
+Followed component composition and separation of concerns.
+Prioritized accessibility and clean code structure.
+Used key prop strategy for reliable form reset in modals.
