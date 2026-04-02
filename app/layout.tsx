@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/public/icon-light-32x32.png',
+        url: '/public/icon-light.png',
         media: '(prefers-color-scheme: light)',
       },
       {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       },
       {
         url: '/public/icon.png',
-        type: 'image/svg+xml',
+        type: 'image/png',
       },
     ],
   },
