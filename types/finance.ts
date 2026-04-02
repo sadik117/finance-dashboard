@@ -1,3 +1,5 @@
+import { Lightbulb } from "lucide-react"
+
 export type TransactionType = "income" | "expense"
 
 export type Category =
@@ -28,4 +30,13 @@ export interface IFilterState {
   category: Category | "all"
   sortBy: "date" | "amount"
   sortOrder: "asc" | "desc"
+}
+
+
+export interface Insight {
+  id: string
+  title: string
+  description: string
+  type: "positive" | "negative" | "neutral"
+  icon: typeof Lightbulb
 }
