@@ -83,18 +83,28 @@ Open http://localhost:3000 in your browser.
 ├── lib/                   # Utility functions and constants and mock/initial data
 
 
+
 # How to Use:
 
 Switch Roles: Use the role selector in the header to toggle between Admin and Viewer mode.
+
 Add Transaction: Click the "Add Transaction" button (Admin only).
+
 Edit/Delete: Use action buttons on each transaction row (Admin only).
+
 Filter Data: Use the search bar and filter dropdowns in the Transactions section.
+
 View Insights: Check the Insights panel for smart financial observations.
+
 
 # Design Decisions:
 
 Used Context API for global state management (lightweight and sufficient for this scale).
+
 Implemented memoization (useMemo, useCallback) for performance optimization.
+
 Followed component composition and separation of concerns.
+
 Prioritized accessibility and clean code structure.
+
 Used key prop strategy for reliable form reset in modals.
