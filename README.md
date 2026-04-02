@@ -4,7 +4,7 @@ A clean, modern, and interactive **Finance Dashboard** built with Next.js, TypeS
 
 This dashboard helps users track their income, expenses, and spending patterns with an intuitive interface and role-based viewing experience.
 
-![Finance Dashboard Preview]([(https://finance-dashboard-green-gamma.vercel.app/]))
+**Live Demo:** [https://finance-dashboard-green-gamma.vercel.app](https://finance-dashboard-green-gamma.vercel.app)
 
 ##  Features
 
@@ -52,7 +52,8 @@ This dashboard helps users track their income, expenses, and spending patterns w
 ### Installation
 
 Clone the repository:
-git clone [[https://github.com/yourusername/finance-dashboard.git](https://github.com/sadik117/finance-dashboard/tree/main)]
+git clone https://github.com/sadik117/finance-dashboard.git
+
 cd finance-dashboard
 
 Install dependencies:
@@ -66,13 +67,19 @@ Open http://localhost:3000 in your browser.
 # Project Structure
 
 ├── app/                    # Next.js App Router
+
 ├── components/
+
 │   ├── dashboard/         # Main dashboard components
+
 │   ├── ui/                # Reusable shadcn/ui components
 │  
 ├── context/               # Finance Context Provider
+
 ├── hooks/                 # Custom hooks (useFinance, useIsMobile, etc.)
+
 ├── types/                 # TypeScript type definitions
+
 ├── lib/                   # Utility functions and constants and mock/initial data
 
 
